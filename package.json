@@ -1,0 +1,30 @@
+{
+  "name": "number-formatter",
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha test/.setup.js test/**/*.spec.js",
+    "lint": "eslint --ext .js ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mchirkin/number-formatter.git"
+  },
+  "author": "Maxim Chirkin (http://github.com/mchirkin)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mchirkin/number-formatter/issues"
+  },
+  "homepage": "https://github.com/mchirkin/number-formatter#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "mocha": "^3.3.0",
+    "webpack": "^2.5.1"
+  }
+}
