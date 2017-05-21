@@ -8,6 +8,8 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'lib'),
+    library: 'numberFormatter',
+    libraryTarget: 'umd',
   },
   module: {
 	  rules: [
@@ -17,9 +19,6 @@ module.exports = {
 		  	use: [
 		  		{
 		  			loader: 'babel-loader',
-		  			options: {
-		  				presets: ["es2015", "stage-3"]
-		  			}
 		  		},
 		  	],
 		  },
