@@ -2,7 +2,7 @@ import reverseString from './reverse_string';
 import checkNumber from './check_number';
 
 /**
- *
+ * Formats input number
  * @param {number|string} number
  * @param {string} delimeter integer part delimeter
  * @param {number} precision number of digits in fraction
@@ -18,8 +18,8 @@ export default function formatNumber(
   } = {}
 ) {
   if (!checkNumber(number)) {
-    console.warn('[number-formatter] invalid number');
-    return false;
+    console.warn('[number-formatter] invalid number', number);
+    return number;
   }
 
   // replace ',' to '.' for parseFloat to correctly work

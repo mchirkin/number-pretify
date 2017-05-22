@@ -4,6 +4,10 @@
  * @return {boolean}
  */
 export default function checkNumber(num) {
+  if (typeof num !== 'number' || typeof num !== 'string') {
+    return false;
+  }
+
   if (typeof num === 'number') {
     return true;
   }
