@@ -4,18 +4,20 @@
 
 ### Install
 ```
-npm install --save number-formatter
+npm install --save number-pretify
 ```
 
 ### Usage
 ```javascript
-import numberFormatter from 'number-formatter';
+import numberPretify from 'number-pretify';
 
-console.log(numberFormatter(1000)); // '1 000'
-console.log(numberFormatter(-1000.23)); // '- 1 000,23'
-console.log(numberFormatter('1000000,167', {
+console.log(numberPretify(1000)); // '1 000'
+console.log(numberPretify(-1000.23)); // '- 1 000,23'
+console.log(numberPretify('1000000,167', {
   precision: 2,
   delimeter: '.',
 })); // '1.000.000,17'
-console.log(1000.1, { decimalMark: '.' }); // '1 000.1'
+console.log(numberPretify(1000.1, {
+  decimalMark: '.'
+})); // '1 000.1'
 ```
