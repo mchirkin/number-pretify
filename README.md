@@ -1,6 +1,6 @@
 # Number-formatter
 
-![build status](https://travis-ci.org/mchirkin/number-formatter.svg?branch=master)
+![build status](https://travis-ci.org/mchirkin/number-pretify.svg?branch=master)
 
 ### Install
 ```

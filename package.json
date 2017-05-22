@@ -1,5 +1,5 @@
 {
-  "name": "number-formatter",
+  "name": "number-pretify",
   "version": "0.1.0",
   "description": "Format number every 3 digits",
   "main": "lib/index.js",
