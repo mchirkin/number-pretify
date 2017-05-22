@@ -3,6 +3,19 @@ const path = require('path');
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
+const plugins = [];
+
+if (NODE_ENV === 'production') {
+  plugins.push(
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        drop_console: false,
+      }
+    })
+  );
+}
+
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -24,8 +37,9 @@ module.exports = {
 		  },
 	  ],
 	},
-	devtool: NODE_ENV === 'development' ? 'cheap-inline-source-map' : null,
+	devtool: NODE_ENV === 'development' ? 'cheap-inline-source-map' : false,
 	watch: NODE_ENV === 'development',
+  plugins: plugins,
 	resolve: {
 		extensions: ['.js'],
 		modules: [
