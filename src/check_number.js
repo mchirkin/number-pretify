@@ -4,7 +4,7 @@
  * @return {boolean}
  */
 export default function checkNumber(num) {
-  if (typeof num !== 'number' || typeof num !== 'string') {
+  if (typeof num !== 'number' && typeof num !== 'string') {
     return false;
   }
 
