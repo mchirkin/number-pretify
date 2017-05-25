@@ -6,7 +6,9 @@ import checkNumber from './check_number';
  * @param {number|string} number
  * @param {string} delimeter integer part delimeter
  * @param {number} precision number of digits in fraction
- * @param {string} decimalMark symbol used to separate the integer part from the fractional part
+ * @param {string} decimalMark symbol used to separate the integer part
+ * from the fractional part
+ * @param {string} suffix a string that will be added after number
  * @return {string}
  */
 export default function formatNumber(
@@ -14,7 +16,8 @@ export default function formatNumber(
   {
     delimeter = ' ',
     precision,
-    decimalMark = ','
+    decimalMark = ',',
+    suffix,
   } = {}
 ) {
   if (!checkNumber(number)) {
@@ -45,6 +48,10 @@ export default function formatNumber(
     result = integerPartFormatted;
   } else {
     result = `${integerPartFormatted}${decimalMark}${fractionalPart}`;
+  }
+
+  if (suffix) {
+    result = `${result}${suffix}`;
   }
 
   return isNegative ? `- ${result}` : result;

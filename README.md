@@ -21,6 +21,7 @@ Option | Description | Default value
 delimeter | Integer part delimeter for every 3 digits | ' '
 precision | Number of digits in fractional part |
 decimalMark | Symbol used to separate the integer part from the fractional part | ','
+suffix | String that will be added after number |
 
 ### Example
 ```javascript
@@ -35,4 +36,7 @@ console.log(numberPretify('1000000,167', {
 console.log(numberPretify(1000.1, {
   decimalMark: '.'
 })); // '1 000.1'
+console.log(numberPretify(1000, {
+  suffix: '$'
+})); // '1 000$'
 ```

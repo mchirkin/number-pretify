@@ -16,5 +16,8 @@ describe('formatNumber', function() {
     expect(formatNumber(1000000.17, {
       delimeter: '.',
     })).to.equal('1.000.000,17');
+    expect(formatNumber(1000, {
+      suffix: '$',
+    })).to.equal('1 000$');
   });
 });
