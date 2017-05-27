@@ -17,7 +17,7 @@ numberPretify(number, options);
 #### ```options``` object
 
 Option | Description | Type | Default value
------------- | ------------- | -------------
+------------ | ------------- | ------------- | -------------
 delimeter | Integer part delimeter for every 3 digits | string | ' '
 precision | Number of digits in fractional part | number |
 decimalMark | Symbol used to separate the integer part from the fractional part | string | ','
