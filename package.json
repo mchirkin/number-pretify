@@ -1,6 +1,6 @@
 {
   "name": "number-pretify",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Format number every 3 digits",
   "main": "lib/index.js",
   "scripts": {
@@ -16,7 +16,8 @@
   },
   "keywords": [
     "numbers",
-    "format"
+    "format",
+    "human"
   ],
   "author": "Maxim Chirkin (http://github.com/mchirkin)",
   "license": "MIT",
