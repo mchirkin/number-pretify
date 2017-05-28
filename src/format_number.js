@@ -10,6 +10,7 @@ import checkNumber from './check_number';
  * @param {string} suffix a string that will be added after number
  * @param {string} prefix a string that will be added before number
  * @param {boolean} prefixAfterNegativeSign place prefix after negative sign
+ * @param {string} negativeSign a string that will be added as negative sign
  * @return {string}
  */
 export default function formatNumber(
@@ -21,6 +22,7 @@ export default function formatNumber(
     suffix,
     prefix,
     prefixAfterNegativeSign = false,
+    negativeSign = '- ',
   } = {}
 ) {
   if (!checkNumber(number)) {
@@ -59,10 +61,10 @@ export default function formatNumber(
 
   if (prefix) {
     if (!prefixAfterNegativeSign && isNegative) {
-      return `${prefix}- ${result}`;
+      return `${prefix}${negativeSign}${result}`;
     }
     result = `${prefix}${result}`;
   }
 
-  return isNegative ? `- ${result}` : result;
+  return isNegative ? `${negativeSign}${result}` : result;
 }

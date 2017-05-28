@@ -24,6 +24,7 @@ decimalMark | Symbol used to separate the integer part from the fractional part 
 prefix | String that will be added before number | string |
 prefixAfterNegativeSign | Place prefix after negative sign | boolean | false
 suffix | String that will be added after number | string |
+negativeSign | String that will be added as negative sign | boolean | '- '
 
 ### Example
 ```javascript
@@ -58,4 +59,8 @@ console.log(numberPretify(-1000, {
   prefix: '$ ',
   prefixAfterNegativeSign: true,
 })); // '- $ 1 000'
+
+console.log(numberPretify(-1000, {
+  negativeSign: 'minus ',
+})); // 'minus 1 000'
 ```
