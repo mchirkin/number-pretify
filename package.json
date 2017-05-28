@@ -1,6 +1,6 @@
 {
   "name": "number-pretify",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Format number every 3 digits",
   "main": "lib/index.js",
   "scripts": {
